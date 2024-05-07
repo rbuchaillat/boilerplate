@@ -1,6 +1,5 @@
 "use client";
 
-import type { FC, PropsWithChildren } from "react";
 import Link from "next/link";
 import { CreditCard, LogOut, User } from "lucide-react";
 
@@ -17,7 +16,11 @@ import {
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 
-export const UserMenu: FC<PropsWithChildren> = ({ children }) => {
+export const UserMenu = ({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>{children}</DropdownMenuTrigger>

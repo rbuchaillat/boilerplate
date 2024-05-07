@@ -6,6 +6,7 @@ import { PrismaAdapter } from "@auth/prisma-adapter";
 
 import { Routes } from "@/types/routes.type";
 import { prisma } from "./prisma";
+import { User } from "@prisma/client";
 
 export const { auth, handlers, signIn, signOut } = NextAuth({
   adapter: PrismaAdapter(prisma),
@@ -19,7 +20,9 @@ export const currentUser = async () => {
     return null;
   }
 
-  return session.user;
+  const user = session.user as User;
+
+  return user;
 };
 
 export const requiredCurrentUser = async () => {
