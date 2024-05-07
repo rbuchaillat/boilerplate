@@ -8,7 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Routes } from "@/types/routes";
+import { Routes } from "@/types/routes.type";
 
 export default function Logout() {
   return (

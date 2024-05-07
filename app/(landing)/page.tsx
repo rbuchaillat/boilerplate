@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Rocket } from "lucide-react";
 
-import { Routes } from "@/types/routes";
+import { Routes } from "@/types/routes.type";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {

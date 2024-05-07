@@ -4,7 +4,7 @@ import GitHub from "next-auth/providers/github";
 import Google from "next-auth/providers/google";
 import { PrismaAdapter } from "@auth/prisma-adapter";
 
-import { Routes } from "@/types/routes";
+import { Routes } from "@/types/routes.type";
 import { prisma } from "./prisma";
 
 export const { auth, handlers, signIn, signOut } = NextAuth({
