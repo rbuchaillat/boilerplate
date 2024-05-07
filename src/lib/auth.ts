@@ -1,18 +1,33 @@
+import { redirect } from "next/navigation";
 import NextAuth from "next-auth";
+import GitHub from "next-auth/providers/github";
+import Google from "next-auth/providers/google";
 import { PrismaAdapter } from "@auth/prisma-adapter";
-import { PrismaClient } from "@prisma/client";
-import GoogleProvider from "next-auth/providers/google";
 
-import { env } from "@/env";
+import { Routes } from "@/types/routes";
+import { prisma } from "./prisma";
 
-const prisma = new PrismaClient();
-
-export const { handlers, auth, signIn, signOut } = NextAuth({
+export const { auth, handlers, signIn, signOut } = NextAuth({
   adapter: PrismaAdapter(prisma),
-  providers: [
-    GoogleProvider({
-      clientId: env.GOOGLE_CLIENT_ID,
-      clientSecret: env.GOOGLE_CLIENT_SECRET,
-    }),
-  ],
+  providers: [GitHub, Google],
 });
+
+export const currentUser = async () => {
+  const session = await auth();
+
+  if (!session) {
+    return null;
+  }
+
+  return session.user;
+};
+
+export const requiredCurrentUser = async () => {
+  const user = await currentUser();
+
+  if (!user) {
+    redirect(Routes.Logout);
+  }
+
+  return user;
+};

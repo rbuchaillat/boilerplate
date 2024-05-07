@@ -3,7 +3,7 @@
 import { useBearStore } from "@/stores/use-bear-store";
 import { Button } from "@/components/ui/button";
 
-export default function Bear() {
+export default function BearState() {
   const { bears, increase } = useBearStore((state) => ({
     bears: state.bears,
     increase: state.increase,
