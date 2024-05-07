@@ -13,6 +13,7 @@ export const createProductAction = authAction(
         userId: context.user.id,
       },
     });
+
     return product;
   }
 );

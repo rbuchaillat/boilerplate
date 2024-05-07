@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { File, ListFilter, MoreHorizontal, PlusCircle } from "lucide-react";
 
 import { prisma } from "@/lib/prisma";
@@ -102,9 +101,6 @@ export default async function Products() {
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead className="hidden w-[100px] sm:table-cell">
-                    <span className="sr-only">Image</span>
-                  </TableHead>
                   <TableHead>Name</TableHead>
                   <TableHead>Status</TableHead>
                   <TableHead className="hidden md:table-cell">Price</TableHead>
@@ -122,16 +118,7 @@ export default async function Products() {
               <TableBody>
                 {products.map((product) => {
                   return (
-                    <TableRow>
-                      <TableCell className="hidden sm:table-cell">
-                        <Image
-                          alt="Product image"
-                          className="aspect-square rounded-md object-cover"
-                          height="64"
-                          src="https://cdn.icon-icons.com/icons2/1487/PNG/512/8369-bitcoin_102502.png"
-                          width="64"
-                        />
-                      </TableCell>
+                    <TableRow key={product.id}>
                       <TableCell className="font-medium">
                         {product.name}
                       </TableCell>

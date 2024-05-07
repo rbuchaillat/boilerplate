@@ -1,5 +1,6 @@
 "use client";
 
+import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "./theme.provider";
 import { QueryClientProvider } from "./query-client.provider";
 
@@ -15,7 +16,10 @@ export function Providers({
       enableSystem
       disableTransitionOnChange
     >
-      <QueryClientProvider>{children}</QueryClientProvider>
+      <QueryClientProvider>
+        {children}
+        <Toaster />
+      </QueryClientProvider>
     </ThemeProvider>
   );
 }
