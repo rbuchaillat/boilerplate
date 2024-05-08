@@ -67,8 +67,6 @@ These steps are crucial for setting up your authentication mechanism properly an
 - Zod: TypeScript-first schema validation to ensure data integrity.
 - Lucide: Icon library to enhance visual design with scalable vector icons.
 - React Hook Form: Simplifies form management with hooks, improving form validation and performance.
-- Recharts: A composable charting library built on React components for data visualization.
-- nuqs: A library for type-safe URL management in TypeScript projects.
 - @t3-oss/env-nextjs: Utility for managing environment variables in Next.js.
 
 ## ⚙️ Backend
@@ -86,7 +84,7 @@ This section provides a brief overview of the technologies used in this boilerpl
 - Tailwind CSS: Allows developers to use utility classes to build custom designs without leaving your HTML.
 - Zustand & TanStack Query: Handle global and asynchronous state with ease, improving scalability and maintainability of state management.
 - Zod & React Hook Form: Enhance form handling and data validation, ensuring robust and user-friendly forms.
-- Recharts & Lucide: Provide rich data visualization and modern icons to enhance UI aesthetics and usability.
+- Lucide: Provide modern icons to enhance UI aesthetics and usability.
 - Prisma & PostgreSQL: Offer powerful tools for database schema management and high-performance queries.
 
 Make sure to configure your environment variables correctly with @t3-oss/env-nextjs to seamlessly integrate all backend functionalities.
