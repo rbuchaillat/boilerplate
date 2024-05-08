@@ -7,7 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-export default function Login() {
+export default function LoginPage() {
   return (
     <Card className="mx-auto max-w-sm">
       <CardHeader>

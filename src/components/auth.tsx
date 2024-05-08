@@ -4,7 +4,7 @@ import {
   signInWithGitHubAction,
   signInWithGoogleAction,
   signOutAction,
-} from "@/actions/auth.action";
+} from "@/actions/auth";
 import { Button } from "./ui/button";
 
 export function SignInWithGitHub() {

@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { CreditCard, LogOut, User } from "lucide-react";
 
-import { signOutAction } from "@/actions/auth.action";
-import { Routes } from "@/types/routes.type";
+import { signOutAction } from "@/actions/auth";
+import { Routes } from "@/types/routes";
 import {
   DropdownMenu,
   DropdownMenuContent,

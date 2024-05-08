@@ -8,9 +8,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Routes } from "@/types/routes.type";
+import { Routes } from "@/types/routes";
 
-export default function Logout() {
+export default function LogoutPage() {
   return (
     <Card className="mx-auto max-w-sm">
       <CardHeader>

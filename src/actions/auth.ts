@@ -1,7 +1,7 @@
 "use server";
 
 import { signIn, signOut } from "@/lib/auth";
-import { Routes } from "@/types/routes.type";
+import { Routes } from "@/types/routes";
 
 export const signInWithGitHubAction = async () => {
   await signIn("github", { redirectTo: Routes.Dashboard });

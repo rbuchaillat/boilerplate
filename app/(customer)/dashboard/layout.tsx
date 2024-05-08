@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 
 import { requiredCurrentUser } from "@/lib/auth";
-import { Routes } from "@/types/routes.type";
+import { Routes } from "@/types/routes";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -28,7 +28,7 @@ import { ModeToggle } from "@/components/mode-toggle";
 import { UserMenu } from "@/components/user-menu";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-export default async function RootLayout({
+export default async function DashboardLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

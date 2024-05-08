@@ -2,7 +2,7 @@
 
 import { prisma } from "@/lib/prisma";
 import { authAction } from "@/lib/safe-action";
-import { ProductSchema } from "@/schemas/product.schema";
+import { ProductSchema } from "@/schemas/product";
 
 export const createProductAction = authAction(
   ProductSchema,

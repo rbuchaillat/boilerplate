@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { Routes } from "@/types/routes.type";
+import { Routes } from "@/types/routes";
 import { currentUser } from "@/lib/auth";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { UserMenu } from "@/components/user-menu";
 
-export default async function RootLayout({
+export default async function LandingLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

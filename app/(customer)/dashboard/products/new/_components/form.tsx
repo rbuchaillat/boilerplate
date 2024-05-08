@@ -5,8 +5,8 @@ import { useForm } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query";
 import { zodResolver } from "@hookform/resolvers/zod";
 
-import { ProductSchema, type ProductType } from "@/schemas/product.schema";
-import { createProductAction } from "@/actions/product.action";
+import { ProductSchema, type ProductType } from "@/schemas/product";
+import { createProductAction } from "@/actions/product";
 import {
   Form,
   FormControl,
@@ -19,7 +19,7 @@ import {
 import { useToast } from "@/components/ui/use-toast";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Routes } from "@/types/routes.type";
+import { Routes } from "@/types/routes";
 
 export function NewProductForm() {
   const router = useRouter();

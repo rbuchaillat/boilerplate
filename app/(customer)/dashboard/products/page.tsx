@@ -3,7 +3,7 @@ import { File, ListFilter, MoreHorizontal, PlusCircle } from "lucide-react";
 
 import { prisma } from "@/lib/prisma";
 import { requiredCurrentUser } from "@/lib/auth";
-import { Routes } from "@/types/routes.type";
+import { Routes } from "@/types/routes";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -33,7 +33,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-export default async function Products() {
+export default async function ProductsPage() {
   const user = await requiredCurrentUser();
 
   const products = await prisma.product.findMany({

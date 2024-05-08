@@ -1,8 +1,8 @@
 "use client";
 
 import { Toaster } from "@/components/ui/toaster";
-import { ThemeProvider } from "./theme.provider";
-import { QueryClientProvider } from "./query-client.provider";
+import { ThemeProvider } from "./theme";
+import { QueryClientProvider } from "./query-client";
 
 export function Providers({
   children,

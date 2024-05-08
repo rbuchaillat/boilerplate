@@ -1,9 +1,9 @@
 "use client";
 
-import { useBearStore } from "@/stores/use-bear-store";
+import { useBearStore } from "@/stores/use-bear";
 import { Button } from "@/components/ui/button";
 
-export default function BearState() {
+export const Bear = () => {
   const { bears, increase } = useBearStore((state) => ({
     bears: state.bears,
     increase: state.increase,
@@ -15,4 +15,4 @@ export default function BearState() {
       <Button onClick={increase}>add bear</Button>
     </div>
   );
-}
+};
